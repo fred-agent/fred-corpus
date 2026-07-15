@@ -1,0 +1,27 @@
+[
+  {
+    "external_id": "arxivai-1",
+    "input": "What is RAGuard, and by how much does it improve Safety Recall@K in Offshore Wind maintenance?",
+    "expected_output": "RAGuard is an enhanced Retrieval-Augmented Generation framework for Offshore Wind maintenance. It issues parallel queries to two separate indices with distinct retrieval budgets for technical knowledge and safety content, and its SafetyClamp extension hard-clamps exact safety slots. It raises Safety Recall@K from almost 0% in standard RAG to more than 50%, while maintaining Technical Recall above 60%."
+  },
+  {
+    "external_id": "arxivai-2",
+    "input": "In the hybrid reinforcement-learning and search approach to flight-trajectory planning, what results are reported on fuel consumption and computation speed?",
+    "expected_output": "An RL agent pre-computes near-optimal paths that constrain the search-based solver, reducing its search space. On Airbus aircraft performance models, fuel consumption stays within about 1% of an unconstrained solver, while computation speed improves by up to 50% compared with a conventional solver alone. Global optimality is not guaranteed, since the approach constrains the solver rather than searching exhaustively."
+  },
+  {
+    "external_id": "arxivai-3",
+    "input": "How do the corpus's two works on agentic LLM assistants improve effectiveness — one through task automation, one through personality conditioning?",
+    "expected_output": "FaMA is a conversational, agentic assistant for the Facebook Marketplace consumer-to-consumer setting; it shifts the interaction from a complex GUI to natural language, automating high-friction workflows such as listing updates, bulk messaging and product discovery, and achieves a 98% task-success rate on complex tasks with up to a 2x speedup in interaction time. MBTI-in-Thoughts conditions LLM agents on Myers-Briggs personality archetypes via prompt engineering, with no fine-tuning, along the cognition and affect axes: emotionally primed agents excel at narrative generation while analytically primed ones adopt more stable strategies in game-theoretic settings; it generalizes to Big Five, HEXACO and the Enneagram."
+  },
+  {
+    "external_id": "arxivai-4",
+    "input": "Across the corpus, how do three different works make retrieval- or memory-augmented LLMs more reliable, and what concrete gains do they report?",
+    "expected_output": "RAGuard (Offshore Wind maintenance) issues parallel queries to two separate indices with distinct retrieval budgets for technical and safety content, and its SafetyClamp extension hard-clamps safety slots, raising Safety Recall@K from almost 0% to more than 50% while keeping Technical Recall above 60%. The medical concept-standardization system relies on the Model Context Protocol (MCP) to map source terms to OMOP standard concepts, using a zero-training, hallucination-preventive design with real-time vocabulary lookups and structured reasoning. ArcMemo introduces concept-level memory — reusable, modular abstractions distilled from solution traces and stored in natural language, retrieved into the prompt without weight updates — yielding a 7.5% relative gain over a strong no-memory baseline on ARC-AGI."
+  },
+  {
+    "external_id": "arxivai-5",
+    "input": "Which four papers combine reinforcement learning or search for planning and reasoning, and what are their key results?",
+    "expected_output": "S-BFS (Sampling Best-First Search) treats control parameters as explicit decision points in an infinite decision space and uses delayed partial expansion, proving completeness in the limit under certain conditions. The hybrid RL-and-search flight-trajectory planner trains an RL agent to pre-compute near-optimal paths that constrain the solver; on Airbus models fuel consumption stays within about 1% of an unconstrained solver while computation speed improves by up to 50%, though global optimality is not guaranteed. The AlphaZero robustness work shows that simple modifications to the standard framework significantly boost performance when the test environment differs from training, even with a low planning budget. CoT-Space recasts LLM reasoning from token prediction to optimization in a continuous, reasoning-level semantic space, framing the optimal Chain-of-Thought length as a trade-off between underfitting and overfitting and explaining the overthinking phenomenon."
+  }
+]
