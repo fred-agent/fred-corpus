@@ -1,0 +1,32 @@
+[
+  {
+    "external_id": "ewhybrid-1",
+    "input": "The FS Surcouf shows a DF azimuth mismatch at 12:40Z. How should this anomaly be classified according to the standing operating procedure, and why?",
+    "expected_output": "The raw classification per SOP-VEM-2025-04 would be NIVEAU 3 with procedure P-21, since the azimuth discrepancy (+90 degrees, recorded 325.7 vs geometric bearing about 235.7 from RAD-BRE) far exceeds the 10-degree threshold for df_azimuth_mismatch. However, the SOP's exercise exemption applies: activity bulletin 2025-243, entry 243-E, declares exercise TRIDENT ECLAIR with DF deception (meaconing) trials on 31/08 from 12:30 to 13:00Z in the Iroise Sea zone (47 48N to 48 18N / 004 54W to 005 36W), with FS Surcouf and station RAD-BRE as participants. The anomaly falls inside the declared time window and zone and involves a declared participant, so it must be reclassified NIVEAU 0 (exercise artifact), logged in the watch log with no escalation. A complete answer must verify all three conditions: time window, zone, and participating unit."
+  },
+  {
+    "external_id": "ewhybrid-2",
+    "input": "How should the two out-of-profile frequency emissions at 12:30Z be classified and handled according to the SOP?",
+    "expected_output": "Each emission individually qualifies as freq_out_of_profile under the SOP because both ships are civilian and transmitted above the 16.0 MHz civilian ceiling: MV Costa Brava at 25.527 MHz and MV Atlantique at 20.827 MHz. Individually this is NIVEAU 2 with procedure P-12. But the SOP's multi-basin correlation rule upgrades them: two anomalies of the same nature within 5 minutes of each other (here the exact same minute, 12:30:00Z) detected by stations more than 300 km apart (RAD-MRS and RAD-ENG are about 817 km apart) constitute a coordination indicator, so the pair must be reclassified NIVEAU 3 and handled under P-21: immediate notification of the duty officer, request for cross-cueing assets, formal CIRCE report within 2 hours, raw recordings kept 90 days. The exercise exemption does not apply: it only covers df_azimuth_mismatch anomalies, and bulletin 2025-243 explicitly declares no activity of any kind in the Gulf of Lion or the Seine Bay on 31/08."
+  },
+  {
+    "external_id": "ewhybrid-3",
+    "input": "MV Costa Brava disappeared from tracking after 13:00Z. Classify this event per the SOP and state whether the activity bulletin explains it.",
+    "expected_output": "The gap lasted 40 minutes (13:00Z to 13:40Z re-acquisition), above the SOP's 15-minute track_gap threshold. On re-acquisition the ship's course had shifted from roughly 85 degrees to roughly 140 degrees, an approximately 55-degree deviation, which exceeds the 30-degree criterion, so the event is classified NIVEAU 2 (not NIVEAU 1) and handled under P-12: consult the activity bulletin, correlate on a second sensor where geometry allows, check AIS continuity, and notify the duty officer within 30 minutes. The bulletin does not explain it: no activity is declared in the Gulf of Lion on 31/08, so the event remains unplanned and unexplained, aggravated by the ship's new course toward the Toulon approaches (about 64 km from Toulon at 18:00Z)."
+  },
+  {
+    "external_id": "ewhybrid-4",
+    "input": "Does the TRIDENT ECLAIR exercise account for all of today's anomalies?",
+    "expected_output": "No. TRIDENT ECLAIR (bulletin entry 243-E) only accounts for the FS Surcouf df_azimuth_mismatch at 12:40Z, which falls within the declared Iroise zone, the 12:30 to 13:00Z window, and involves a declared participant. It does not account for the two freq_out_of_profile emissions at 12:30Z (MV Costa Brava, Gulf of Lion; MV Atlantique, Seine Bay): the exercise exemption in the SOP applies only to df_azimuth_mismatch, and the bulletin declares no activity in those basins. It also does not account for MV Costa Brava's 40-minute tracking gap and subsequent course change after 13:00Z, which is outside the exercise window and zone. Three events therefore remain unexplained and must be treated as unplanned."
+  },
+  {
+    "external_id": "ewhybrid-5",
+    "input": "The bulletin declares maintenance on station RAD-ATL on 31/08. Did it affect the day's detections?",
+    "expected_output": "No. The declared maintenance (bulletin entry 243-D) ran from 05:00 to 05:45Z, entirely before the dataset's coverage window which starts at 06:00Z. RAD-ATL operated normally throughout the covered period and recorded 725 detections. A correct answer must cross-check the bulletin's time slot against the data's actual time window rather than assume an impact."
+  },
+  {
+    "external_id": "ewhybrid-6",
+    "input": "Prepare the duty officer synthesis of today's anomalies as required by the SOP: classification level, applicable procedure, bulletin reference consulted, and remaining unexplained events.",
+    "expected_output": "Per SOP-VEM-2025-04 section 7, the synthesis must state for each event the level, the procedure, the bulletin reference and what remains unexplained. (1) FS Surcouf df_azimuth_mismatch at 12:40Z: reclassified NIVEAU 0, exercise artifact under bulletin 2025-243 entry 243-E (TRIDENT ECLAIR), watch-log entry only. (2) Coordinated out-of-profile emissions at 12:30Z by MV Costa Brava (25.527 MHz, Gulf of Lion) and MV Atlantique (20.827 MHz, Seine Bay): NIVEAU 3 under the multi-basin correlation rule, procedure P-21 with immediate notification and CIRCE report within 2 hours; no covering bulletin entry. (3) MV Costa Brava tracking gap 13:00 to 13:40Z with course change of about 55 degrees toward the Toulon approaches: NIVEAU 2, procedure P-12, no covering bulletin entry. Unexplained events: the two coordinated emissions and the Costa Brava gap and deviation, with the aggravating note that the same ship, MV Costa Brava, is involved in two of the three unexplained events."
+  }
+]

@@ -1,0 +1,10 @@
+port_name,country,iso2,lat,lon,port_type,notes
+Toulon,France,FR,43.117,5.937,military,Main French Med naval base
+Brest,France,FR,48.39,-4.486,military,Atlantic naval base
+Marseille,France,FR,43.296,5.369,mixed,Large commercial + ferry port
+Cherbourg,France,FR,49.639,-1.623,military,Naval base and shipyard
+Le Havre,France,FR,49.494,0.107,commercial,Container and bulk traffic
+Nice,France,FR,43.703,7.266,commercial,Passenger ferries to Corsica
+La Rochelle,France,FR,46.16,-1.151,commercial,Fishing and commercial harbor
+Calais,France,FR,50.951,1.858,commercial,Busy Channel ferry port
+Ajaccio,France,FR,41.919,8.739,commercial,Corsica ferry and commercial port

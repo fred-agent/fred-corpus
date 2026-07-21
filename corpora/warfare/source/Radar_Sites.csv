@@ -1,0 +1,7 @@
+radar_id,name,lat,lon,site_class,elevation_m,owner,nominal_range_km,bearing_coverage_start_deg,bearing_coverage_end_deg
+RAD-TLN,Cap Cepet (Toulon),43.1,6.0,HF-DF,120,FR-NAV,450,0,360
+RAD-BRE,Pointe Saint-Mathieu,48.4,-4.5,HF-DF,85,FR-NAV,500,0,360
+RAD-MRS,Frioul (Marseille),43.3,5.4,HF-DF,62,FR-NAV,420,0,360
+RAD-ATL,Île de Ré (Atlantic),46.2,-1.1,HF-DF,30,FR-NAV,380,0,360
+RAD-ENG,Cap Blanc-Nez (Channel),50.95,1.9,HF-DF,85,FR-NAV,420,0,360
+RAD-COR,Cap Corse,43.0,9.4,HF-DF,180,FR-NAV,430,0,360
