@@ -1,6 +1,6 @@
 # Vérité terrain — ship_tracks_enriched.csv (démo veille EM)
 
-Données synthétiques. Fenêtre 2025-08-31 06:00Z → 18:00Z, cadence 5 min (145 pas).
+Données synthétiques. Fenêtre 2026-07-22 06:00Z → 18:00Z, cadence 5 min (145 pas).
 Les 72 lignes du fichier original de l'équipe GE sont préservées (12:00–12:50Z),
 à une exception près : 4 navires ont été translatés en mer (positions originales à terre),
 cinématique, fréquences, signaux et erreurs d'azimut préservés — dont le +90° du Surcouf.

@@ -1,0 +1,72 @@
+[
+  {
+    "external_id": "ewtracks-1",
+    "input": "How many ships are tracked in the dataset, and what is the civilian/military split?",
+    "expected_output": "40 distinct ships are tracked: 31 civilian and 9 military. The answer must count distinct ship_id values, not rows (there are 5793 detection rows)."
+  },
+  {
+    "external_id": "ewtracks-2",
+    "input": "What time window does the dataset cover, and at what reporting cadence?",
+    "expected_output": "Detections span 2026-07-22 from 06:00:00Z to 18:00:00Z, at a nominal 5-minute cadence (145 time steps), for a total of 5793 rows."
+  },
+  {
+    "external_id": "ewtracks-3",
+    "input": "List all flagged anomalies in the dataset: when, which ship, and what kind.",
+    "expected_output": "Four rows carry an anomaly flag: at 12:30:00Z, MV Costa Brava (CIV-ES-401) with freq_out_of_profile on RAD-MRS; at 12:30:00Z, MV Atlantique (CIV-FR-102) with freq_out_of_profile on RAD-ENG; at 12:40:00Z, FS Surcouf (MIL-FR-002) with df_azimuth_mismatch on RAD-BRE; and at 13:40:00Z, MV Costa Brava again with track_gap on RAD-MRS (re-acquisition after a tracking hole). A distinction between 4 flagged rows and 3 underlying emission anomalies plus one re-acquisition marker is acceptable and even preferable."
+  },
+  {
+    "external_id": "ewtracks-4",
+    "input": "How many detections did each radar site record?",
+    "expected_output": "RAD-TLN (Cap Cepet, Toulon): 1775 detections, RAD-ENG (Cap Blanc-Nez): 1450, RAD-BRE (Pointe Saint-Mathieu): 1015, RAD-ATL (Ile de Re): 725, RAD-MRS (Frioul): 438, RAD-COR (Cap Corse): 390. This requires either the radar_id column alone or a join with Radar_Sites for the site names."
+  },
+  {
+    "external_id": "ewtracks-5",
+    "input": "Are there any tracking gaps, i.e. ships that stopped reporting for longer than the normal 5-minute cadence?",
+    "expected_output": "Yes, exactly one: MV Costa Brava (CIV-ES-401) has no detections between 13:00:00Z and 13:40:00Z, a 40-minute hole (7 missing 5-minute reports). This cannot be read from any status column for the missing period; it must be found by comparing consecutive timestamps per ship. The re-acquisition row at 13:40:00Z is flagged track_gap."
+  },
+  {
+    "external_id": "ewtracks-6",
+    "input": "For the FS Surcouf anomaly at 12:40Z, verify geometrically whether the recorded DF azimuth is consistent with the ship's reported position.",
+    "expected_output": "It is not consistent, which is the point of the df_azimuth_mismatch flag. At 12:40:00Z the Surcouf was tracked by RAD-BRE (Pointe Saint-Mathieu, 48.4N -4.5E). The bearing from the radar to the ship's reported position is approximately 235.7 degrees, while the recorded radar_azimuth_deg is 325.7 degrees: a +90.0 degree discrepancy, far beyond the roughly 2-degree measurement noise seen elsewhere in the data. This magnitude of error suggests DF deception or interference rather than normal measurement error."
+  },
+  {
+    "external_id": "ewtracks-7",
+    "input": "The two freq_out_of_profile anomalies: could they be related, or are they independent events?",
+    "expected_output": "They occurred at exactly the same minute, 12:30:00Z, but in two different basins about 817 km apart: MV Costa Brava in the Gulf of Lion (RAD-MRS) and MV Atlantique in the Seine Bay (RAD-ENG). Both ships transmitted far above their usual HF profile: 25.527 MHz for Costa Brava (normal range roughly 5.0 to 9.9 MHz) and 20.827 MHz for Atlantique (normal range roughly 3.6 to 11.9 MHz). The exact time synchronization across distant basins is compatible with coordinated activity and cannot be explained by a single local emitter or one local exercise; a good answer should surface the simultaneity, the geographic separation, and the similar out-of-band behavior."
+  },
+  {
+    "external_id": "ewtracks-8",
+    "input": "Describe MV Costa Brava's behavior after its tracking gap.",
+    "expected_output": "Before the gap, Costa Brava was heading roughly east (mean course around 85 degrees over the last half hour). It disappeared from tracking between 13:00Z and 13:40Z, then reappeared at 13:40Z at approximately 43.16N 5.24E flagged track_gap, on a new south-easterly course of about 140 degrees at around 12.5 knots. It held that course for the rest of the window, ending at about 42.54N 6.02E at 18:00Z, roughly 64 km from the Toulon naval base, consistent with a deliberate route deviation toward the Toulon approaches."
+  },
+  {
+    "external_id": "ewtracks-9",
+    "input": "How many ships are registered to each home port?",
+    "expected_output": "Marseille 9, Brest 6, Calais 5, La Rochelle 5, Le Havre 4, Nice 4, Toulon 4, Cherbourg 2, Ajaccio 1 (40 ships total, counted as distinct ship_id per home_port)."
+  },
+  {
+    "external_id": "ewtracks-10",
+    "input": "What is the fastest speed recorded in the dataset and by which ship?",
+    "expected_output": "23.7 knots, recorded by the military ship ES Reina (MIL-ES-004) at 13:00:00Z."
+  },
+  {
+    "external_id": "ewtracks-11",
+    "input": "Compare the average speed of military and civilian ships.",
+    "expected_output": "Military ships average about 13.9 knots over all their detections, versus about 10.4 knots for civilian ships. Small deviations due to rounding or averaging per-ship rather than per-row are acceptable if the method is stated."
+  },
+  {
+    "external_id": "ewtracks-12",
+    "input": "How many distinct military ships did each radar site track during the day?",
+    "expected_output": "RAD-BRE, RAD-MRS and RAD-TLN each tracked 4 distinct military ships, and RAD-ENG tracked 1. RAD-ATL and RAD-COR tracked none. Note this is a COUNT(DISTINCT ship_id) question: by raw detection volume the ranking differs (RAD-BRE 580, RAD-TLN 475, RAD-ENG 145, RAD-MRS 105)."
+  },
+  {
+    "external_id": "ewtracks-13",
+    "input": "For each ship that emitted out of its frequency profile, how far outside its own normal emission range was the anomalous transmission?",
+    "expected_output": "MV Costa Brava's anomalous emission was at 25.527 MHz while its normal emissions span roughly 4.97 to 9.92 MHz, i.e. more than 15 MHz above its usual ceiling. MV Atlantique's anomalous emission was at 20.827 MHz against a normal range of roughly 3.64 to 11.89 MHz, about 9 MHz above its ceiling. The comparison requires computing each ship's own baseline from its normal-status rows, not a global fleet baseline."
+  },
+  {
+    "external_id": "ewtracks-14",
+    "input": "What is the strongest signal ever received, and by which site?",
+    "expected_output": "The strongest (least negative) signal is -51.9 dBm, received by RAD-ENG from MV Atlantique (CIV-FR-102) at 12:40:00Z, ten minutes after that ship's out-of-profile emission."
+  }
+]
