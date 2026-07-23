@@ -1,0 +1,82 @@
+{
+  "name": "Industry Ops \u2014 validation set",
+  "version": "1.0.0",
+  "author": "Dimitri Tombroff",
+  "cases": [
+    {
+      "external_id": "industry-1",
+      "input": "How many products do we have in the catalogue, by range, and how many are active?",
+      "expected_output": "The Products tab lists 25 products across 4 ranges: Vektor 7, Orion 6, Atlas 6, Pulsar 6. 23 are active and 2 are discontinued (VK-090, AT-380). An answer of 23 total products silently drops the discontinued ones; the agent must either give 25 or state it counted actives only."
+    },
+    {
+      "external_id": "industry-2",
+      "input": "How many purchased parts are in the parts master, and what is the criticality split?",
+      "expected_output": "The Parts tab lists 120 parts: 18 class A, 63 class B and 39 class C."
+    },
+    {
+      "external_id": "industry-3",
+      "input": "Which class A parts are single-sourced, and from which suppliers?",
+      "expected_output": "7 class A parts are single-sourced (dual_sourced = no): AL-7043, EN-5500, MG-8804, MG-8805, PC-6600, RT-4410, ST-3020. AL-7043 (cast aluminium housing, Vektor series) comes from SUP-007 TechAlu Foundry; ST-3020 from SUP-012 Kansai Micro Motors, RT-4410 from SUP-015 Jura Gears, EN-5500 from SUP-018 Highland Sensors, PC-6600 from SUP-017 Flanders PCB Assembly, and MG-8804 / MG-8805 from SUP-006 Nordwind Magnetics. The supplier mapping must come from a join between Parts and Suppliers, not be invented."
+    },
+    {
+      "external_id": "industry-4",
+      "input": "Which suppliers are below 85% on-time delivery over the rolling three-month window?",
+      "expected_output": "Two suppliers: SUP-007 TechAlu Foundry SAS at 71% and SUP-002 Baltic Fasteners OU at 83%. All other suppliers are at or above 85%."
+    },
+    {
+      "external_id": "industry-5",
+      "input": "Which parts are currently below their safety stock level?",
+      "expected_output": "14 parts have qty_on_hand below safety_stock: AL-7043, BR-2204, CB-9501, CN-6120, EN-5501, FA-8801, GR-3304, MG-8804, PC-6603, SE-7702, SH-1201, SN-9902, SP-9101, ST-3021. The most exposed is AL-7043 with 260 on hand against a safety stock of 720 (36% coverage), a class A part."
+    },
+    {
+      "external_id": "industry-6",
+      "input": "Do we have late purchase orders? There is no 'late' status in the data.",
+      "expected_output": "Yes, 9 POs are late as of 2026-07-15: lateness must be derived as due_date earlier than the as-of date with a status other than fully received (open, confirmed and partially_received all count). 5 of the 9 late POs are on TechAlu Foundry (SUP-007), covering AL-7043 (twice), AL-7046, AL-7049 and AL-7055; the other late POs are PO-2026-1063 (Cataluna Bearings, BR-2204), PO-2026-1068 (Vltava Electronics, CN-6120), and PO-2026-1072 / PO-2026-1075 (Baltic Fasteners, FA-8805 / FA-8803). An agent that answers 'no late orders' because no status says 'late' fails the question."
+    },
+    {
+      "external_id": "industry-7",
+      "input": "Which parts are both below safety stock and covered only by a late purchase order, and which products does that put at risk?",
+      "expected_output": "Three parts combine both conditions: AL-7043, BR-2204, CN-6120. Through the BOM they feed 15 active products: all 6 active Vektor products (via AL-7043), 4 Orion and 2 Atlas products (via BR-2204), and 3 Pulsar products (via CN-6120). Full list: AT-410, AT-560, OR-205, OR-230L, OR-260S, OR-310, PU-12, PU-16C, PU-22, VK-110, VK-140, VK-140H, VK-180, VK-180X, VK-220. This requires joining four tabs (Stock, OpenOrders, BOM, Products). Including the discontinued VK-090 (which also uses AL-7043) in the at-risk list is a business error: only active products count."
+    },
+    {
+      "external_id": "industry-8",
+      "input": "How has the Vektor gross margin evolved over the last twelve months, compared to the other ranges?",
+      "expected_output": "Vektor gross margin was stable around 34% from 2025-08 through 2026-02 (34.1% in February), then declined every month to 28.3% in July 2026 \u2014 a drop of 5.8 points in five months. The other ranges are stable over the same period: Orion around 37%, Atlas around 29%, Pulsar around 41%. The erosion is specific to Vektor and starts in March 2026."
+    },
+    {
+      "external_id": "industry-9",
+      "input": "Why is the Vektor margin eroding? Cross-check the operational data with the supplier documents.",
+      "expected_output": "The audit report AUDIT-SUP-2026-014 records an 18% price increase on TechAlu cast housing references, notified 2026-02-10 and effective 2026-03-01, raising AL-7043 from 39.66 EUR to 46.80 EUR. AL-7043 is present (qty 1) in every Vektor product and in no other range, and the Finance tab shows the Vektor margin starting to fall exactly in March 2026 while Orion, Atlas and Pulsar stay flat. Porosity rejects on TechAlu batches (the dominant defect in the NCR register) add scrap and rework cost on top. A complete answer connects the price increase date to the inflection month; attributing the erosion to volume or pricing effects contradicts the stable revenue in the Finance tab."
+    },
+    {
+      "external_id": "industry-10",
+      "input": "Which suppliers generate the most quality incidents this year?",
+      "expected_output": "The NCR register holds 300 incidents (2026-01-02 to 2026-07-14). Top 5 by count: SUP-007 TechAlu Foundry 61, SUP-005 Delta Polymers 34, SUP-002 Baltic Fasteners 30, SUP-014 Silesia Stampings 28, SUP-016 Anatolia Castings 26."
+    },
+    {
+      "external_id": "industry-11",
+      "input": "Is the NCR trend on TechAlu getting worse, and does it trigger anything per our procedure?",
+      "expected_output": "Yes. TechAlu NCRs: 14 in Q1 2026, 33 in Q2, and already 14 in the first two weeks of July \u2014 a clear acceleration, with porosity representing about 70.5% of TechAlu defects. On part AL-7043 alone, 22 NCRs were recorded in Q2 2026, which exceeds the threshold of ten NCRs per part-supplier pair per calendar quarter set by PROC-PUR-2025-11 \u00a77.2: a special process audit had to be triggered within 30 days. (The for-cause audit of 2026-03-12 predates Q2 and does not discharge the Q2 trigger.)"
+    },
+    {
+      "external_id": "industry-12",
+      "input": "What does our procurement procedure require when a supplier's on-time delivery drops below 85%?",
+      "expected_output": "PROC-PUR-2025-11 \u00a75.1: the supplier shall be placed under a formal corrective action plan (CAP) within 15 working days of the measurement, with dated milestones and a completion deadline. If the CAP deadline lapses without closure, new order placement shall be restricted to the minimum required to protect production and the situation escalated to the Supply Chain Director. This is a pure document question; the answer must come from the SOP, not be improvised."
+    },
+    {
+      "external_id": "industry-13",
+      "input": "What is our policy on single-sourcing critical parts?",
+      "expected_output": "PROC-PUR-2025-11 \u00a74.2: every class A part shall have at least two qualified sources. Single-sourcing a class A part requires a written waiver signed by the Supply Chain Director stating the mitigation plan; waivers are valid at most twelve months and reviewed every six months. An expired waiver constitutes a non-compliance escalated to the monthly industrial review. For class B parts dual sourcing is recommended, with single source acceptable if lead time is at most 60 days."
+    },
+    {
+      "external_id": "industry-14",
+      "input": "Is TechAlu Foundry compliant with our procurement procedure as of today?",
+      "expected_output": "No, on four grounds. (1) OTD is 71%, below the 85% threshold of \u00a75.1. (2) The corrective action plan from audit AUDIT-SUP-2026-014 had a completion deadline of 2026-06-15, which has lapsed with OTD still at 71% (action A4 not met) \u2014 \u00a75.1 therefore requires restricting new orders and escalating to the Supply Chain Director. (3) The single-source waiver W-2024-031 covering class A part AL-7043 expired on 2026-05-31 with no renewal, a standing non-compliance with \u00a74.2. (4) 22 NCRs on the AL-7043/TechAlu pair in Q2 2026 exceed the \u00a77.2 quarterly threshold of ten, requiring a special process audit within 30 days. A complete answer combines the Excel data (OTD, NCR counts, dates) with both PDF documents; 'yes, they are approved' based on the Suppliers tab status alone is wrong."
+    },
+    {
+      "external_id": "industry-15",
+      "input": "Are there any inconsistencies between our supplier data and what the procedure mandates?",
+      "expected_output": "At least one clear case: Delta Polymers Srl (SUP-005) has a quality rating of 74, below the 75-point threshold of \u00a75.3, which mandates suspension of new purchase orders and a documented risk acceptance for open ones. Yet the OpenOrders tab shows 3 open POs to Delta Polymers (PO-2026-1088, PO-2026-1109, PO-2026-1110) and the Suppliers tab still lists the supplier as plainly 'approved'. A strong answer may also flag the seven single-sourced class A parts against \u00a74.2 (waiver evidence exists only for AL-7043, and that waiver is expired) and TechAlu's overdue CAP. The point of the question is to check data against policy, not to summarise either alone."
+    }
+  ]
+}

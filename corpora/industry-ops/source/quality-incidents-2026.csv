@@ -1,0 +1,301 @@
+ncr_id,date,part_id,supplier_id,batch_id,defect_type,qty_rejected,disposition
+NCR-2026-0001,2026-01-02,MG-8805,SUP-006,B26167,surface finish,30,return to supplier
+NCR-2026-0002,2026-01-02,FA-8805,SUP-002,B26142,functional failure,2,rework
+NCR-2026-0003,2026-01-02,SP-9107,SUP-011,B26185,surface finish,30,scrap
+NCR-2026-0004,2026-01-04,SE-7705,SUP-010,B26277,missing certificate,5,return to supplier
+NCR-2026-0005,2026-01-05,CB-9502,SUP-009,B26036,surface finish,20,rework
+NCR-2026-0006,2026-01-06,BR-2203,SUP-004,B26080,packaging damage,2,scrap
+NCR-2026-0007,2026-01-06,AL-7043,SUP-007,B26049,porosity,25,return to supplier
+NCR-2026-0008,2026-01-06,SP-9102,SUP-011,B26104,surface finish,20,rework
+NCR-2026-0009,2026-01-06,SE-7703,SUP-005,B26015,plating defect,15,use-as-is (concession)
+NCR-2026-0010,2026-01-06,AL-7070,SUP-016,B26235,functional failure,30,scrap
+NCR-2026-0011,2026-01-06,SE-7707,SUP-010,B26197,dimensional out of tolerance,20,rework
+NCR-2026-0012,2026-01-06,PC-6602,SUP-017,B26048,surface finish,30,scrap
+NCR-2026-0013,2026-01-07,SP-9107,SUP-011,B26189,missing certificate,2,rework
+NCR-2026-0014,2026-01-07,FA-8802,SUP-002,B26032,surface finish,2,rework
+NCR-2026-0015,2026-01-08,SH-1205,SUP-001,B26155,porosity,30,use-as-is (concession)
+NCR-2026-0016,2026-01-08,PC-6601,SUP-017,B26096,packaging damage,30,rework
+NCR-2026-0017,2026-01-09,SH-1201,SUP-001,B26162,dimensional out of tolerance,2,rework
+NCR-2026-0018,2026-01-11,FA-8801,SUP-014,B26243,functional failure,30,scrap
+NCR-2026-0019,2026-01-11,CB-9505,SUP-009,B26018,contamination,2,return to supplier
+NCR-2026-0020,2026-01-12,BR-2203,SUP-004,B26100,plating defect,20,scrap
+NCR-2026-0021,2026-01-12,CN-6125,SUP-009,B26111,dimensional out of tolerance,2,scrap
+NCR-2026-0022,2026-01-13,BR-2200,SUP-004,B26089,missing certificate,2,rework
+NCR-2026-0023,2026-01-13,FA-8801,SUP-014,B26268,surface finish,2,scrap
+NCR-2026-0024,2026-01-15,SE-7708,SUP-005,B26288,dimensional out of tolerance,10,return to supplier
+NCR-2026-0025,2026-01-15,SE-7700,SUP-010,B26036,plating defect,2,scrap
+NCR-2026-0026,2026-01-15,CB-9505,SUP-009,B26284,missing certificate,15,rework
+NCR-2026-0027,2026-01-16,SH-1207,SUP-001,B26199,porosity,2,rework
+NCR-2026-0028,2026-01-16,FA-8806,SUP-014,B26191,plating defect,15,rework
+NCR-2026-0029,2026-01-17,AL-7046,SUP-007,B26068,porosity,40,rework
+NCR-2026-0030,2026-01-18,FA-8805,SUP-002,B26294,contamination,20,rework
+NCR-2026-0031,2026-01-18,BR-2202,SUP-004,B26186,functional failure,2,use-as-is (concession)
+NCR-2026-0032,2026-01-19,FA-8804,SUP-002,B26268,contamination,30,return to supplier
+NCR-2026-0033,2026-01-19,SE-7701,SUP-005,B26074,porosity,10,rework
+NCR-2026-0034,2026-01-20,BR-2200,SUP-004,B26240,dimensional out of tolerance,5,return to supplier
+NCR-2026-0035,2026-01-20,AL-7073,SUP-016,B26138,dimensional out of tolerance,5,scrap
+NCR-2026-0036,2026-01-21,BR-2203,SUP-004,B26104,plating defect,15,return to supplier
+NCR-2026-0037,2026-01-22,SE-7702,SUP-010,B26091,functional failure,30,use-as-is (concession)
+NCR-2026-0038,2026-01-22,FA-8804,SUP-002,B26082,plating defect,10,rework
+NCR-2026-0039,2026-01-23,FA-8808,SUP-014,B26087,surface finish,2,rework
+NCR-2026-0040,2026-01-24,AL-7061,SUP-016,B26165,packaging damage,20,return to supplier
+NCR-2026-0041,2026-01-24,SH-1205,SUP-001,B26055,plating defect,5,scrap
+NCR-2026-0042,2026-01-25,AL-7058,SUP-007,B26127,porosity,60,return to supplier
+NCR-2026-0043,2026-01-26,SE-7703,SUP-005,B26010,surface finish,2,rework
+NCR-2026-0044,2026-01-28,SN-9904,SUP-018,B26256,surface finish,15,use-as-is (concession)
+NCR-2026-0045,2026-01-29,SE-7706,SUP-005,B26182,functional failure,30,use-as-is (concession)
+NCR-2026-0046,2026-01-29,PC-6600,SUP-017,B26166,porosity,5,return to supplier
+NCR-2026-0047,2026-01-29,AL-7058,SUP-007,B26219,porosity,40,return to supplier
+NCR-2026-0048,2026-01-30,AL-7067,SUP-016,B26240,missing certificate,10,rework
+NCR-2026-0049,2026-01-30,FA-8806,SUP-014,B26272,contamination,20,rework
+NCR-2026-0050,2026-01-30,AL-7046,SUP-007,B26255,porosity,60,rework
+NCR-2026-0051,2026-01-31,SE-7703,SUP-005,B26189,functional failure,2,use-as-is (concession)
+NCR-2026-0052,2026-01-31,AL-7064,SUP-016,B26018,plating defect,10,return to supplier
+NCR-2026-0053,2026-01-31,FA-8802,SUP-002,B26173,surface finish,5,use-as-is (concession)
+NCR-2026-0054,2026-01-31,SP-9105,SUP-011,B26168,contamination,30,use-as-is (concession)
+NCR-2026-0055,2026-02-01,SE-7707,SUP-010,B26086,contamination,30,use-as-is (concession)
+NCR-2026-0056,2026-02-01,SP-9100,SUP-014,B26165,surface finish,10,use-as-is (concession)
+NCR-2026-0057,2026-02-05,FA-8801,SUP-014,B26216,dimensional out of tolerance,2,return to supplier
+NCR-2026-0058,2026-02-06,BR-2206,SUP-004,B26156,plating defect,30,rework
+NCR-2026-0059,2026-02-06,FA-8800,SUP-002,B26227,packaging damage,10,return to supplier
+NCR-2026-0060,2026-02-06,FA-8807,SUP-014,B26152,plating defect,30,rework
+NCR-2026-0061,2026-02-08,SE-7708,SUP-005,B26231,plating defect,30,rework
+NCR-2026-0062,2026-02-08,FA-8800,SUP-002,B26188,plating defect,30,rework
+NCR-2026-0063,2026-02-09,SH-1203,SUP-003,B26279,plating defect,20,scrap
+NCR-2026-0064,2026-02-09,CN-6125,SUP-009,B26080,plating defect,20,use-as-is (concession)
+NCR-2026-0065,2026-02-11,CN-6127,SUP-008,B26296,functional failure,15,return to supplier
+NCR-2026-0066,2026-02-12,SE-7706,SUP-005,B26292,plating defect,30,return to supplier
+NCR-2026-0067,2026-02-13,CN-6122,SUP-009,B26014,missing certificate,10,rework
+NCR-2026-0068,2026-02-13,SN-9901,SUP-008,B26142,surface finish,30,scrap
+NCR-2026-0069,2026-02-13,SP-9104,SUP-011,B26235,dimensional out of tolerance,10,return to supplier
+NCR-2026-0070,2026-02-14,FA-8805,SUP-002,B26276,missing certificate,2,return to supplier
+NCR-2026-0071,2026-02-15,PC-6604,SUP-017,B26282,packaging damage,10,return to supplier
+NCR-2026-0072,2026-02-16,PC-6601,SUP-017,B26015,dimensional out of tolerance,15,rework
+NCR-2026-0073,2026-02-16,SP-9103,SUP-014,B26122,porosity,30,rework
+NCR-2026-0074,2026-02-18,SE-7701,SUP-005,B26253,functional failure,10,use-as-is (concession)
+NCR-2026-0075,2026-02-19,SE-7705,SUP-010,B26077,plating defect,15,use-as-is (concession)
+NCR-2026-0076,2026-02-20,AL-7055,SUP-007,B26230,porosity,10,return to supplier
+NCR-2026-0077,2026-02-20,AL-7061,SUP-016,B26271,plating defect,20,rework
+NCR-2026-0078,2026-02-22,SE-7703,SUP-005,B26204,surface finish,20,use-as-is (concession)
+NCR-2026-0079,2026-02-23,SP-9104,SUP-011,B26092,dimensional out of tolerance,5,scrap
+NCR-2026-0080,2026-02-24,AL-7043,SUP-007,B26199,porosity,20,return to supplier
+NCR-2026-0081,2026-02-24,SE-7707,SUP-010,B26135,plating defect,5,scrap
+NCR-2026-0082,2026-02-25,GR-3301,SUP-003,B26015,contamination,15,scrap
+NCR-2026-0083,2026-02-25,FA-8806,SUP-014,B26288,porosity,2,return to supplier
+NCR-2026-0084,2026-02-26,CB-9505,SUP-009,B26236,plating defect,20,scrap
+NCR-2026-0085,2026-02-26,MG-8809,SUP-006,B26145,surface finish,15,return to supplier
+NCR-2026-0086,2026-02-27,AL-7043,SUP-007,B26246,porosity,40,return to supplier
+NCR-2026-0087,2026-02-28,SP-9103,SUP-014,B26039,missing certificate,30,use-as-is (concession)
+NCR-2026-0088,2026-02-28,FA-8808,SUP-014,B26115,missing certificate,2,rework
+NCR-2026-0089,2026-03-01,AL-7049,SUP-007,B26219,porosity,25,return to supplier
+NCR-2026-0090,2026-03-01,AL-7067,SUP-016,B26196,surface finish,30,scrap
+NCR-2026-0091,2026-03-02,SE-7705,SUP-010,B26195,packaging damage,2,scrap
+NCR-2026-0092,2026-03-02,BR-2203,SUP-004,B26107,porosity,5,scrap
+NCR-2026-0093,2026-03-03,AL-7064,SUP-016,B26184,functional failure,20,rework
+NCR-2026-0094,2026-03-03,AL-7073,SUP-016,B26226,porosity,5,rework
+NCR-2026-0095,2026-03-04,AL-7052,SUP-007,B26103,porosity,25,rework
+NCR-2026-0096,2026-03-04,BR-2206,SUP-004,B26096,packaging damage,30,rework
+NCR-2026-0097,2026-03-05,SE-7701,SUP-005,B26033,packaging damage,10,use-as-is (concession)
+NCR-2026-0098,2026-03-06,AL-7070,SUP-016,B26096,surface finish,30,scrap
+NCR-2026-0099,2026-03-06,BR-2202,SUP-004,B26239,functional failure,10,return to supplier
+NCR-2026-0100,2026-03-06,SE-7706,SUP-005,B26089,porosity,20,rework
+NCR-2026-0101,2026-03-07,EN-5500,SUP-018,B26214,dimensional out of tolerance,2,rework
+NCR-2026-0102,2026-03-09,AL-7049,SUP-007,B26152,porosity,10,scrap
+NCR-2026-0103,2026-03-09,CN-6124,SUP-009,B26132,plating defect,10,scrap
+NCR-2026-0104,2026-03-10,SE-7705,SUP-010,B26220,plating defect,10,use-as-is (concession)
+NCR-2026-0105,2026-03-10,BR-2206,SUP-004,B26237,packaging damage,30,scrap
+NCR-2026-0106,2026-03-11,SP-9105,SUP-011,B26198,porosity,10,scrap
+NCR-2026-0107,2026-03-12,AL-7052,SUP-007,B26039,porosity,10,use-as-is (concession)
+NCR-2026-0108,2026-03-12,AL-7061,SUP-016,B26061,plating defect,30,scrap
+NCR-2026-0109,2026-03-13,SE-7708,SUP-005,B26133,surface finish,20,return to supplier
+NCR-2026-0110,2026-03-14,SP-9104,SUP-011,B26078,surface finish,20,scrap
+NCR-2026-0111,2026-03-16,BR-2208,SUP-004,B26222,missing certificate,20,rework
+NCR-2026-0112,2026-03-16,SP-9101,SUP-014,B26221,packaging damage,10,rework
+NCR-2026-0113,2026-03-17,AL-7073,SUP-016,B26084,missing certificate,5,return to supplier
+NCR-2026-0114,2026-03-17,CB-9501,SUP-018,B26104,porosity,20,scrap
+NCR-2026-0115,2026-03-18,SE-7708,SUP-005,B26234,missing certificate,20,rework
+NCR-2026-0116,2026-03-18,AL-7055,SUP-007,B26064,porosity,15,return to supplier
+NCR-2026-0117,2026-03-18,FA-8808,SUP-014,B26069,functional failure,2,use-as-is (concession)
+NCR-2026-0118,2026-03-19,SE-7701,SUP-005,B26204,contamination,15,scrap
+NCR-2026-0119,2026-03-19,CB-9505,SUP-009,B26114,surface finish,30,return to supplier
+NCR-2026-0120,2026-03-21,CB-9502,SUP-009,B26227,functional failure,2,use-as-is (concession)
+NCR-2026-0121,2026-03-21,AL-7064,SUP-016,B26251,functional failure,2,scrap
+NCR-2026-0122,2026-03-22,AL-7076,SUP-016,B26105,plating defect,15,return to supplier
+NCR-2026-0123,2026-03-23,FA-8801,SUP-014,B26201,plating defect,20,rework
+NCR-2026-0124,2026-03-24,EN-5500,SUP-018,B26104,packaging damage,5,scrap
+NCR-2026-0125,2026-03-24,AL-7070,SUP-016,B26115,missing certificate,5,return to supplier
+NCR-2026-0126,2026-03-27,AL-7049,SUP-007,B26297,surface finish,15,scrap
+NCR-2026-0127,2026-03-27,BR-2208,SUP-004,B26296,packaging damage,10,return to supplier
+NCR-2026-0128,2026-03-28,FA-8800,SUP-002,B26096,missing certificate,5,scrap
+NCR-2026-0129,2026-03-31,FA-8803,SUP-002,B26013,packaging damage,30,scrap
+NCR-2026-0130,2026-04-01,SP-9105,SUP-011,B26051,dimensional out of tolerance,10,return to supplier
+NCR-2026-0131,2026-04-01,AL-7064,SUP-016,B26130,functional failure,5,rework
+NCR-2026-0132,2026-04-01,AL-7076,SUP-016,B26192,functional failure,10,return to supplier
+NCR-2026-0133,2026-04-02,SE-7703,SUP-005,B26039,dimensional out of tolerance,30,scrap
+NCR-2026-0134,2026-04-02,MG-8804,SUP-006,B26047,packaging damage,5,return to supplier
+NCR-2026-0135,2026-04-02,CN-6121,SUP-008,B26240,packaging damage,2,rework
+NCR-2026-0136,2026-04-03,FA-8800,SUP-002,B26293,missing certificate,30,scrap
+NCR-2026-0137,2026-04-03,FA-8807,SUP-014,B26284,contamination,2,rework
+NCR-2026-0138,2026-04-03,BR-2203,SUP-004,B26046,porosity,30,scrap
+NCR-2026-0139,2026-04-03,AL-7043,SUP-007,B26239,porosity,40,scrap
+NCR-2026-0140,2026-04-04,SE-7708,SUP-005,B26271,missing certificate,20,use-as-is (concession)
+NCR-2026-0141,2026-04-04,CN-6126,SUP-008,B26256,porosity,30,return to supplier
+NCR-2026-0142,2026-04-05,SP-9105,SUP-011,B26133,missing certificate,5,scrap
+NCR-2026-0143,2026-04-08,SP-9103,SUP-014,B26162,missing certificate,20,return to supplier
+NCR-2026-0144,2026-04-08,AL-7043,SUP-007,B26131,porosity,60,rework
+NCR-2026-0145,2026-04-08,PC-6606,SUP-008,B26018,surface finish,30,return to supplier
+NCR-2026-0146,2026-04-08,SE-7701,SUP-005,B26161,surface finish,20,use-as-is (concession)
+NCR-2026-0147,2026-04-09,SP-9105,SUP-011,B26227,packaging damage,10,use-as-is (concession)
+NCR-2026-0148,2026-04-10,GR-3301,SUP-003,B26243,plating defect,20,return to supplier
+NCR-2026-0149,2026-04-11,AL-7043,SUP-007,B26065,porosity,20,scrap
+NCR-2026-0150,2026-04-12,FA-8804,SUP-002,B26258,packaging damage,2,rework
+NCR-2026-0151,2026-04-13,AL-7055,SUP-007,B26208,surface finish,20,return to supplier
+NCR-2026-0152,2026-04-14,AL-7073,SUP-016,B26231,functional failure,20,rework
+NCR-2026-0153,2026-04-15,AL-7043,SUP-007,B26027,porosity,10,rework
+NCR-2026-0154,2026-04-15,GR-3300,SUP-003,B26255,functional failure,5,use-as-is (concession)
+NCR-2026-0155,2026-04-16,SE-7706,SUP-005,B26019,plating defect,20,return to supplier
+NCR-2026-0156,2026-04-17,CB-9504,SUP-009,B26190,plating defect,20,rework
+NCR-2026-0157,2026-04-17,FA-8808,SUP-014,B26257,missing certificate,2,rework
+NCR-2026-0158,2026-04-18,SE-7705,SUP-010,B26218,contamination,30,return to supplier
+NCR-2026-0159,2026-04-19,ST-3020,SUP-012,B26023,contamination,15,scrap
+NCR-2026-0160,2026-04-19,FA-8804,SUP-002,B26014,plating defect,30,rework
+NCR-2026-0161,2026-04-19,AL-7049,SUP-007,B26010,porosity,40,rework
+NCR-2026-0162,2026-04-19,FA-8800,SUP-002,B26266,missing certificate,30,rework
+NCR-2026-0163,2026-04-20,SE-7708,SUP-005,B26277,missing certificate,5,rework
+NCR-2026-0164,2026-04-21,SE-7701,SUP-005,B26190,functional failure,10,rework
+NCR-2026-0165,2026-04-21,CN-6125,SUP-009,B26222,surface finish,10,scrap
+NCR-2026-0166,2026-04-22,AL-7064,SUP-016,B26235,contamination,30,scrap
+NCR-2026-0167,2026-04-23,AL-7046,SUP-007,B26200,dimensional out of tolerance,40,return to supplier
+NCR-2026-0168,2026-04-23,EN-5502,SUP-013,B26185,packaging damage,30,rework
+NCR-2026-0169,2026-04-24,SP-9100,SUP-014,B26105,contamination,15,scrap
+NCR-2026-0170,2026-04-24,AL-7055,SUP-007,B26241,dimensional out of tolerance,40,scrap
+NCR-2026-0171,2026-04-26,AL-7043,SUP-007,B26101,porosity,15,scrap
+NCR-2026-0172,2026-04-26,SE-7700,SUP-010,B26142,packaging damage,20,return to supplier
+NCR-2026-0173,2026-04-27,CN-6128,SUP-009,B26177,surface finish,15,scrap
+NCR-2026-0174,2026-04-27,CB-9500,SUP-009,B26176,plating defect,10,scrap
+NCR-2026-0175,2026-04-28,PC-6604,SUP-017,B26255,surface finish,5,rework
+NCR-2026-0176,2026-04-28,SE-7702,SUP-010,B26069,missing certificate,5,return to supplier
+NCR-2026-0177,2026-05-01,AL-7043,SUP-007,B26089,missing certificate,25,return to supplier
+NCR-2026-0178,2026-05-02,CB-9503,SUP-009,B26048,functional failure,15,use-as-is (concession)
+NCR-2026-0179,2026-05-03,PC-6605,SUP-017,B26118,plating defect,10,rework
+NCR-2026-0180,2026-05-04,SP-9100,SUP-014,B26167,dimensional out of tolerance,15,use-as-is (concession)
+NCR-2026-0181,2026-05-04,SE-7701,SUP-005,B26119,functional failure,20,rework
+NCR-2026-0182,2026-05-04,FA-8807,SUP-014,B26242,functional failure,2,return to supplier
+NCR-2026-0183,2026-05-04,AL-7043,SUP-007,B26011,porosity,60,return to supplier
+NCR-2026-0184,2026-05-05,FA-8806,SUP-014,B26024,missing certificate,10,return to supplier
+NCR-2026-0185,2026-05-05,SE-7703,SUP-005,B26134,functional failure,15,rework
+NCR-2026-0186,2026-05-06,AL-7043,SUP-007,B26053,missing certificate,40,return to supplier
+NCR-2026-0187,2026-05-06,MG-8809,SUP-006,B26245,contamination,20,rework
+NCR-2026-0188,2026-05-07,GR-3308,SUP-003,B26297,packaging damage,5,scrap
+NCR-2026-0189,2026-05-07,SE-7700,SUP-010,B26126,dimensional out of tolerance,2,use-as-is (concession)
+NCR-2026-0190,2026-05-07,FA-8800,SUP-002,B26099,surface finish,10,use-as-is (concession)
+NCR-2026-0191,2026-05-08,FA-8805,SUP-002,B26191,packaging damage,10,use-as-is (concession)
+NCR-2026-0192,2026-05-08,AL-7043,SUP-007,B26152,porosity,10,return to supplier
+NCR-2026-0193,2026-05-09,AL-7043,SUP-007,B26285,porosity,15,rework
+NCR-2026-0194,2026-05-10,AL-7064,SUP-016,B26218,surface finish,30,rework
+NCR-2026-0195,2026-05-10,EN-5504,SUP-013,B26045,packaging damage,15,rework
+NCR-2026-0196,2026-05-13,GR-3301,SUP-003,B26222,packaging damage,2,use-as-is (concession)
+NCR-2026-0197,2026-05-13,FA-8805,SUP-002,B26010,functional failure,2,use-as-is (concession)
+NCR-2026-0198,2026-05-13,FA-8807,SUP-014,B26248,missing certificate,5,scrap
+NCR-2026-0199,2026-05-14,AL-7043,SUP-007,B26180,surface finish,10,return to supplier
+NCR-2026-0200,2026-05-14,AL-7043,SUP-007,B26212,porosity,40,rework
+NCR-2026-0201,2026-05-14,SP-9100,SUP-014,B26287,surface finish,5,scrap
+NCR-2026-0202,2026-05-15,SH-1206,SUP-001,B26103,missing certificate,2,return to supplier
+NCR-2026-0203,2026-05-15,FA-8805,SUP-002,B26124,missing certificate,20,rework
+NCR-2026-0204,2026-05-16,FA-8808,SUP-014,B26068,porosity,10,rework
+NCR-2026-0205,2026-05-17,AL-7043,SUP-007,B26255,porosity,15,use-as-is (concession)
+NCR-2026-0206,2026-05-18,SE-7704,SUP-010,B26050,plating defect,5,rework
+NCR-2026-0207,2026-05-19,SP-9103,SUP-014,B26154,missing certificate,20,return to supplier
+NCR-2026-0208,2026-05-19,BR-2208,SUP-004,B26147,contamination,10,return to supplier
+NCR-2026-0209,2026-05-20,SP-9104,SUP-011,B26101,plating defect,2,scrap
+NCR-2026-0210,2026-05-21,SH-1200,SUP-001,B26187,packaging damage,15,return to supplier
+NCR-2026-0211,2026-05-21,AL-7070,SUP-016,B26050,contamination,2,return to supplier
+NCR-2026-0212,2026-05-21,GR-3300,SUP-003,B26228,functional failure,2,scrap
+NCR-2026-0213,2026-05-22,SE-7705,SUP-010,B26096,contamination,30,return to supplier
+NCR-2026-0214,2026-05-23,AL-7046,SUP-007,B26039,missing certificate,5,scrap
+NCR-2026-0215,2026-05-24,AL-7073,SUP-016,B26225,contamination,5,return to supplier
+NCR-2026-0216,2026-05-24,SN-9904,SUP-018,B26229,functional failure,15,use-as-is (concession)
+NCR-2026-0217,2026-05-26,AL-7043,SUP-007,B26043,porosity,10,return to supplier
+NCR-2026-0218,2026-05-27,AL-7043,SUP-007,B26028,porosity,5,rework
+NCR-2026-0219,2026-05-28,AL-7046,SUP-007,B26232,surface finish,40,return to supplier
+NCR-2026-0220,2026-05-28,FA-8804,SUP-002,B26110,porosity,30,return to supplier
+NCR-2026-0221,2026-05-29,SE-7703,SUP-005,B26152,dimensional out of tolerance,10,use-as-is (concession)
+NCR-2026-0222,2026-05-29,PC-6604,SUP-017,B26149,porosity,2,use-as-is (concession)
+NCR-2026-0223,2026-05-30,CN-6126,SUP-008,B26298,plating defect,2,return to supplier
+NCR-2026-0224,2026-05-31,AL-7043,SUP-007,B26044,porosity,5,return to supplier
+NCR-2026-0225,2026-05-31,FA-8800,SUP-002,B26178,dimensional out of tolerance,2,rework
+NCR-2026-0226,2026-06-01,SE-7701,SUP-005,B26074,packaging damage,10,scrap
+NCR-2026-0227,2026-06-02,SE-7704,SUP-010,B26033,plating defect,2,rework
+NCR-2026-0228,2026-06-02,SN-9905,SUP-008,B26096,missing certificate,20,use-as-is (concession)
+NCR-2026-0229,2026-06-02,AL-7076,SUP-016,B26208,dimensional out of tolerance,20,rework
+NCR-2026-0230,2026-06-02,AL-7043,SUP-007,B26176,surface finish,10,return to supplier
+NCR-2026-0231,2026-06-04,AL-7061,SUP-016,B26072,porosity,10,return to supplier
+NCR-2026-0232,2026-06-04,FA-8800,SUP-002,B26236,surface finish,2,scrap
+NCR-2026-0233,2026-06-04,SE-7706,SUP-005,B26011,porosity,30,rework
+NCR-2026-0234,2026-06-05,EN-5506,SUP-018,B26298,packaging damage,15,rework
+NCR-2026-0235,2026-06-05,CB-9505,SUP-009,B26263,functional failure,15,rework
+NCR-2026-0236,2026-06-07,FA-8800,SUP-002,B26041,surface finish,5,scrap
+NCR-2026-0237,2026-06-08,PC-6605,SUP-017,B26220,plating defect,5,return to supplier
+NCR-2026-0238,2026-06-09,AL-7052,SUP-007,B26148,porosity,40,scrap
+NCR-2026-0239,2026-06-09,BR-2206,SUP-004,B26174,functional failure,2,use-as-is (concession)
+NCR-2026-0240,2026-06-10,FA-8804,SUP-002,B26073,surface finish,15,use-as-is (concession)
+NCR-2026-0241,2026-06-10,SP-9106,SUP-014,B26261,porosity,20,scrap
+NCR-2026-0242,2026-06-10,AL-7043,SUP-007,B26174,porosity,10,rework
+NCR-2026-0243,2026-06-11,AL-7058,SUP-007,B26174,porosity,40,scrap
+NCR-2026-0244,2026-06-11,AL-7052,SUP-007,B26283,porosity,25,scrap
+NCR-2026-0245,2026-06-12,FA-8800,SUP-002,B26093,packaging damage,10,scrap
+NCR-2026-0246,2026-06-13,BR-2202,SUP-004,B26229,packaging damage,15,return to supplier
+NCR-2026-0247,2026-06-14,SP-9102,SUP-011,B26271,dimensional out of tolerance,5,return to supplier
+NCR-2026-0248,2026-06-14,SE-7701,SUP-005,B26044,porosity,15,rework
+NCR-2026-0249,2026-06-15,FA-8803,SUP-002,B26125,dimensional out of tolerance,20,return to supplier
+NCR-2026-0250,2026-06-17,SE-7701,SUP-005,B26181,surface finish,15,return to supplier
+NCR-2026-0251,2026-06-17,AL-7055,SUP-007,B26290,missing certificate,10,return to supplier
+NCR-2026-0252,2026-06-18,SE-7702,SUP-010,B26281,functional failure,15,scrap
+NCR-2026-0253,2026-06-19,SE-7703,SUP-005,B26085,porosity,10,use-as-is (concession)
+NCR-2026-0254,2026-06-19,BR-2208,SUP-004,B26136,missing certificate,30,scrap
+NCR-2026-0255,2026-06-19,AL-7043,SUP-007,B26146,porosity,20,use-as-is (concession)
+NCR-2026-0256,2026-06-20,FA-8804,SUP-002,B26105,dimensional out of tolerance,15,use-as-is (concession)
+NCR-2026-0257,2026-06-20,AL-7049,SUP-007,B26188,porosity,10,return to supplier
+NCR-2026-0258,2026-06-21,FA-8807,SUP-014,B26189,contamination,10,return to supplier
+NCR-2026-0259,2026-06-22,FA-8800,SUP-002,B26281,functional failure,20,return to supplier
+NCR-2026-0260,2026-06-22,FA-8803,SUP-002,B26230,surface finish,5,rework
+NCR-2026-0261,2026-06-23,AL-7043,SUP-007,B26201,porosity,10,scrap
+NCR-2026-0262,2026-06-24,SE-7705,SUP-010,B26219,dimensional out of tolerance,10,return to supplier
+NCR-2026-0263,2026-06-24,FA-8800,SUP-002,B26155,surface finish,5,use-as-is (concession)
+NCR-2026-0264,2026-06-24,SE-7702,SUP-010,B26200,plating defect,2,rework
+NCR-2026-0265,2026-06-25,SN-9901,SUP-008,B26010,surface finish,15,return to supplier
+NCR-2026-0266,2026-06-25,AL-7043,SUP-007,B26210,porosity,20,rework
+NCR-2026-0267,2026-06-25,PC-6607,SUP-008,B26099,plating defect,5,return to supplier
+NCR-2026-0268,2026-06-25,SE-7700,SUP-010,B26289,plating defect,20,use-as-is (concession)
+NCR-2026-0269,2026-06-27,AL-7043,SUP-007,B26113,porosity,15,return to supplier
+NCR-2026-0270,2026-06-28,SE-7704,SUP-010,B26297,porosity,5,scrap
+NCR-2026-0271,2026-06-28,BR-2201,SUP-015,B26177,plating defect,10,scrap
+NCR-2026-0272,2026-06-30,SE-7703,SUP-005,B26232,functional failure,10,return to supplier
+NCR-2026-0273,2026-07-01,SE-7706,SUP-005,B26141,packaging damage,2,rework
+NCR-2026-0274,2026-07-01,PC-6605,SUP-017,B26194,dimensional out of tolerance,2,scrap
+NCR-2026-0275,2026-07-01,AL-7043,SUP-007,B26174,dimensional out of tolerance,10,scrap
+NCR-2026-0276,2026-07-02,AL-7064,SUP-016,B26161,porosity,15,scrap
+NCR-2026-0277,2026-07-02,AL-7043,SUP-007,B26140,porosity,10,rework
+NCR-2026-0278,2026-07-03,SE-7700,SUP-010,B26212,packaging damage,30,rework
+NCR-2026-0279,2026-07-03,GR-3304,SUP-003,B26243,functional failure,10,rework
+NCR-2026-0280,2026-07-04,PC-6607,SUP-008,B26235,dimensional out of tolerance,2,rework
+NCR-2026-0281,2026-07-04,AL-7058,SUP-007,B26235,porosity,15,return to supplier
+NCR-2026-0282,2026-07-05,AL-7049,SUP-007,B26115,porosity,20,rework
+NCR-2026-0283,2026-07-05,AL-7046,SUP-007,B26078,missing certificate,20,rework
+NCR-2026-0284,2026-07-06,SE-7706,SUP-005,B26067,surface finish,2,use-as-is (concession)
+NCR-2026-0285,2026-07-06,AL-7043,SUP-007,B26220,porosity,40,return to supplier
+NCR-2026-0286,2026-07-07,AL-7058,SUP-007,B26040,porosity,60,return to supplier
+NCR-2026-0287,2026-07-07,AL-7046,SUP-007,B26021,porosity,15,return to supplier
+NCR-2026-0288,2026-07-07,SE-7701,SUP-005,B26297,contamination,20,scrap
+NCR-2026-0289,2026-07-07,BR-2207,SUP-015,B26029,surface finish,10,scrap
+NCR-2026-0290,2026-07-08,AL-7046,SUP-007,B26092,surface finish,40,return to supplier
+NCR-2026-0291,2026-07-08,AL-7052,SUP-007,B26083,missing certificate,5,scrap
+NCR-2026-0292,2026-07-08,SN-9905,SUP-008,B26076,surface finish,10,scrap
+NCR-2026-0293,2026-07-09,SE-7701,SUP-005,B26137,dimensional out of tolerance,2,return to supplier
+NCR-2026-0294,2026-07-10,SP-9105,SUP-011,B26165,surface finish,10,rework
+NCR-2026-0295,2026-07-11,AL-7055,SUP-007,B26170,surface finish,15,scrap
+NCR-2026-0296,2026-07-12,AL-7070,SUP-016,B26293,surface finish,30,scrap
+NCR-2026-0297,2026-07-12,AL-7043,SUP-007,B26193,porosity,20,scrap
+NCR-2026-0298,2026-07-13,AL-7046,SUP-007,B26180,surface finish,25,return to supplier
+NCR-2026-0299,2026-07-13,AL-7043,SUP-007,B26287,missing certificate,25,return to supplier
+NCR-2026-0300,2026-07-14,PC-6606,SUP-008,B26172,dimensional out of tolerance,30,scrap
