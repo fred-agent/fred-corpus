@@ -18,7 +18,7 @@ fred-corpus/
 │       ├── source/          # files to ingest
 │       └── validation/      # evaluator dataset(s), if any
 ├── prompts/                 # prompt library, not tied to one corpus
-└── use-cases/                # reserved: team-described agent/prompt audit scenarios (not built yet)
+└── use-cases/                # versioned end-to-end agent/prompt audit scenarios
 ```
 
 No per-team folders: a corpus here is reusable by any team: the deployed Fred instance and the team ingesting into it decide the scope, not this repo.
@@ -28,6 +28,9 @@ No per-team folders: a corpus here is reusable by any team: the deployed Fred in
 - Corpus folder names are kebab-case (`bid-mgr`, not `Bid Mgr`) and double as the name you give the corpus when you ingest it in Fred.
 - Validation dataset files: `dataset-<corpus>[-<variant>].json`, so a corpus can grow more than one dataset without renaming anything.
 - Every corpus has a `README.md`: one line on what it is, where it came from, and whether it's sensitive.
+
+Use cases are kebab-case folders under `use-cases/`. Each one references, rather than copies, the
+knowledge base source files it needs and commits its canonical prompt and evaluation rubric.
 
 ## Content policy
 

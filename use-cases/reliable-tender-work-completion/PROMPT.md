@@ -14,7 +14,7 @@ Travaille de manière autonome et exécute toutes les étapes suivantes dans l'o
 6. Formule une recommandation go/no-go argumentée, en séparant les motifs éliminatoires des risques
    de réalisation.
 7. Crée réellement dans le Workspace les trois livrables suivants :
-   - `compliance-matrix.xlsx`, avec une ligne par exigence et au minimum les colonnes identifiant,
+   - `compliance-matrix.csv`, encodé en UTF-8, avec une ligne par exigence et au minimum les colonnes identifiant,
      exigence finale, source, statut, preuve, écart, action, responsable et échéance ;
    - `bid-recommendation.md`, avec la recommandation, les motifs, les preuves et les conditions de
      changement de décision ;

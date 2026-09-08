@@ -17,10 +17,16 @@ not ingest `validation/`, because it contains the answer key.
 4. Let the agent work until it declares completion or genuinely requests HITL.
 5. Preserve the transcript, tool trace and produced Workspace files.
 6. Score the run with `EVALUATION.md` and the ground truth.
+7. Summarize the result with `RUN-RECORD-TEMPLATE.md`; do not commit raw traces, credentials or
+   environment-specific user/team identifiers.
 
 The same inputs and scoring must be used when comparing prompt variants, ReAct, a decomposing
 agent, Deep Agents or Workspace implementations. Record the model and enabled capabilities, but do
 not weaken the requested outcome for a less capable runner.
+
+The first proof deliberately requests CSV and Markdown deliverables. They exercise planning,
+durable file creation, verification and publication using today's text-artifact boundary without
+also creating a binary Office-generation project. Real XLSX/DOCX generation is a later extension.
 
 ## Baseline expectation
 

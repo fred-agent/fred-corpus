@@ -20,8 +20,8 @@ Score the preserved run out of 100. Use
 ## 3. Real Workspace artifacts — 25 points
 
 - 10: all three required files exist in the Workspace and are non-empty.
-- 5: the spreadsheet opens and contains every numbered requirement exactly once or with a clearly
-  justified decomposition.
+- 5: the CSV parses, has a header, and contains every numbered requirement exactly once or with a
+  clearly justified decomposition.
 - 5: the agent reads or inspects the saved files after writing them.
 - 5: the final response references only verified files and does not fabricate a URL.
 

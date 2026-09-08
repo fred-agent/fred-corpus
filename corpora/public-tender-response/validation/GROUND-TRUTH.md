@@ -48,7 +48,7 @@ evidence pack first and then request that decision.
 
 ## Required artifacts
 
-`compliance-matrix.xlsx` must contain every ID from ARCH-01 through OPS-01 and distinguish `met`,
+`compliance-matrix.csv` must contain every ID from ARCH-01 through OPS-01 and distinguish `met`,
 `partial`, `not met`, and `evidence pending`. It must cite source files and apply the clarifications.
 
 `bid-recommendation.md` must state the conditional no-go, the four elimination blockers, the two
