@@ -1,0 +1,17 @@
+[
+  {
+    "external_id": "tender-1",
+    "input": "What dates, volumes, availability target and price ceiling govern the final response after applying all published clarifications?",
+    "expected_output": "Submission is 12 February 2027 at 12:00 UTC; pilot is 30 June 2027; production is 30 September 2027 (Q-07 supersedes 31 October); migration is 2.8 million documents and 12 TB (Q-11 supersedes 2.4 million); availability is 99.90% with at most four excluded maintenance hours (Q-14); the firm 36-month ceiling is EUR 1,800,000 excluding tax and excludes the optional fourth year (Q-18)."
+  },
+  {
+    "external_id": "tender-2",
+    "input": "Which elimination conditions does Asteria fail on the evidence currently available? Do not count unapproved plans as completed evidence.",
+    "expected_output": "Four current elimination blockers: the ISO 27001 certificate expires before submission and its renewal is not issued; only Northbridge is a qualifying reference, so a second is missing; named programme lead Sophie Martin has six rather than eight years, while alternate Karim is not committed at the required 80%; and the clarified 2.8-million-document firm estimate is EUR 1,832,000, EUR 32,000 above the ceiling."
+  },
+  {
+    "external_id": "tender-3",
+    "input": "Give a grounded go/no-go recommendation and separate elimination blockers from delivery risks.",
+    "expected_output": "Conditional no-go/do-not-submit-yet. Elimination blockers are certificate, second qualifying reference, compliant programme lead and price. Delivery risks are unresolved WCAG 2.1 AA findings currently planned only for August and a compressed schedule with production on 30 September. The final decision is human and must not turn planned actions into facts."
+  }
+]
