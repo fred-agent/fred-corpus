@@ -1,0 +1,109 @@
+{
+  "name": "Technical Policy — validation set",
+  "version": "1.0.0",
+  "author": "Dimitri Tombroff",
+  "cases": [
+    {
+      "external_id": "tp-patch-delay",
+      "input": "Dans quel délai faut-il appliquer les correctifs de sécurité, selon le guide d'hygiène informatique de l'ANSSI ?",
+      "expected_output": "Mesure 34 : les correctifs de sécurité doivent être appliqués sur l'ensemble des composants du système dans le mois qui suit leur publication par l'éditeur, en se tenant informé des nouvelles vulnérabilités (CERT-FR). Une politique de mise à jour, déclinée en procédures opérationnelles, précise l'inventaire des composants, les sources d'information, les outils de déploiement (par exemple WSUS) et l'éventuelle qualification et le déploiement progressif des correctifs. Les composants obsolètes qui ne sont plus supportés doivent être isolés (filtrage strict des flux, secrets d'authentification dédiés).",
+      "tags": ["precise", "fr", "mesure-34"]
+    },
+    {
+      "external_id": "tp-log-retention",
+      "input": "Combien de temps faut-il conserver les journaux d'événements de sécurité ?",
+      "expected_output": "Mesure 36 : les événements critiques pour la sécurité doivent être journalisés et conservés pendant au moins un an, ou plus selon les obligations légales du secteur d'activité.",
+      "tags": ["precise", "fr", "mesure-36"]
+    },
+    {
+      "external_id": "tp-admin-internet",
+      "input": "Un poste utilisé pour l'administration du système d'information peut-il accéder à Internet ?",
+      "expected_output": "Non (mesure 27) : un poste ou un serveur d'administration ne doit en aucun cas avoir accès à Internet, à cause des risques de la navigation Web et de la messagerie. Pour leurs autres usages, les administrateurs disposent d'un poste distinct ou, à défaut, d'un accès à une infrastructure bureautique virtualisée distante depuis le poste d'administration ; l'inverse (accéder à l'administration depuis un poste bureautique) est déconseillé. Au niveau renforcé, les mises à jour sont récupérées depuis une source sûre, contrôlées puis transférées sur le poste d'administration, par exemple via un support amovible dédié.",
+      "tags": ["precise", "fr", "mesure-27"]
+    },
+    {
+      "external_id": "tp-admin-accounts",
+      "input": "Comment doivent être organisés les comptes des administrateurs ?",
+      "expected_output": "Mesure 8 : les comptes doivent être nominatifs, les comptes génériques restant marginaux et rattachés à un nombre limité de personnes. Chaque administrateur dispose d'un compte d'administration nominatif distinct de son compte utilisateur, avec un identifiant et des secrets différents (par exemple pmartin et adm-pmartin), dédié exclusivement aux actions d'administration et utilisé sur des environnements dédiés à l'administration. Au niveau renforcé, la journalisation liée aux comptes (connexions réussies et échouées) est activée.",
+      "tags": ["precise", "fr", "mesure-8"]
+    },
+    {
+      "external_id": "tp-passwords-overall",
+      "input": "Que recommande le guide au sujet des mots de passe ?",
+      "expected_output": "Les recommandations sont réparties sur plusieurs mesures. Sensibiliser les utilisateurs à ne pas divulguer leurs mots de passe ni les réutiliser entre sphères professionnelle et privée (mesure 2). Définir et vérifier des règles de choix et de dimensionnement, avec blocage des comptes après plusieurs échecs, désactivation des connexions anonymes et audit de robustesse (mesure 10). Protéger les mots de passe stockés par un coffre-fort numérique et du chiffrement, plutôt que post-it ou fichiers (mesure 11). Changer les mots de passe par défaut dès l'installation et, au niveau renforcé, les renouveler régulièrement (mesure 12). Privilégier une authentification forte à deux facteurs (mesure 13). Éviter un mot de passe Wi-Fi unique et partagé (mesure 20) et changer les mots de passe compromis après un incident (mesure 40).",
+      "tags": ["cross-chapter", "fr", "mesure-2", "mesure-10", "mesure-11", "mesure-12", "mesure-13", "mesure-20", "mesure-40"]
+    },
+    {
+      "external_id": "tp-third-parties",
+      "input": "Quelles mesures du guide concernent les prestataires, infogérants et partenaires ?",
+      "expected_output": "Plusieurs mesures. Prévoir dans les contrats une formation régulière à la sécurité du personnel externe et des infogérants (mesure 1). Maîtriser les risques de l'infogérance : évaluer les risques en amont, imposer des exigences (réversibilité, audits, sauvegarde et restitution des données dans un format ouvert, maintien de la sécurité) et exiger un plan d'assurance sécurité (mesure 3). Sécuriser les interconnexions avec les partenaires : tunnel IPsec sur Internet, filtrage IP au plus près de l'entrée, matrice de flux réduite au juste besoin, point de contact à jour (mesure 25). Proscrire les accès non accompagnés des prestataires aux salles serveurs et changer les codes d'accès lors d'un changement de prestataire (mesure 26). Privilégier des prestataires qualifiés par l'ANSSI : PASSI, PRIS, PDIS, SecNumCloud (mesure 42).",
+      "tags": ["cross-chapter", "fr", "mesure-1", "mesure-3", "mesure-25", "mesure-26", "mesure-42"]
+    },
+    {
+      "external_id": "tp-backups",
+      "input": "Que doit contenir une politique de sauvegarde et comment vérifier que les restaurations fonctionnent ?",
+      "expected_output": "Mesure 37 : la politique de sauvegarde intègre au moins la liste des données vitales et des serveurs concernés, les types de sauvegarde (par exemple hors ligne), leur fréquence, la procédure d'administration et d'exécution, le stockage et les restrictions d'accès, les procédures de test de restauration et la destruction des supports. Les tests de restauration peuvent être systématiques (ordonnanceur), ponctuels ou généraux ; au niveau renforcé, un exercice de restauration est planifié au moins une fois par an avec une trace des résultats. La mesure 14 ajoute, au niveau renforcé, que les données vitales sont sauvegardées sur des équipements déconnectés et leur restauration vérifiée périodiquement, notamment contre les rançongiciels.",
+      "tags": ["cross-chapter", "fr", "mesure-14", "mesure-37"]
+    },
+    {
+      "external_id": "tp-guide-method",
+      "input": "Comment le guide recommande-t-il de prioriser la mise en œuvre de ses 42 mesures ?",
+      "expected_output": "Établir d'abord un état des lieux de chaque règle avec l'outil de suivi en annexe, en déterminant si le niveau standard puis le niveau renforcé est atteint, en se faisant aider d'un spécialiste si nécessaire. Viser en priorité les règles dont le niveau standard n'est pas atteint pour un premier plan d'actions, puis, une fois le standard atteint partout, un nouveau plan visant le niveau renforcé. Lorsque le guide s'applique dans le cadre d'un référentiel ANSSI, ce sont les mesures de niveau standard, sauf mention explicite.",
+      "tags": ["level", "fr", "mode-emploi"]
+    },
+    {
+      "external_id": "tp-firewall-levels",
+      "input": "Pour le pare-feu local des postes de travail, qu'est-ce qui distingue le niveau standard du niveau renforcé ?",
+      "expected_output": "Mesure 17. Niveau standard : activer le pare-feu local des postes pour freiner les déplacements latéraux d'un attaquant, les flux de poste à poste étant rares en bureautique. Niveau renforcé : bloquer les ports d'administration par défaut (TCP 135, 445 et 3389 sous Windows, TCP 22 sous Unix) sauf depuis les ressources identifiées, bloquer tous les flux par défaut et n'autoriser que les services nécessaires (liste blanche) après analyse des flux entrants, et journaliser les flux bloqués.",
+      "tags": ["level", "fr", "mesure-17"]
+    },
+    {
+      "external_id": "tp-incident-first-steps",
+      "input": "Que faut-il faire en premier quand un poste semble compromis ?",
+      "expected_output": "Mesure 40 : déconnecter la machine du réseau pour stopper l'attaque, mais la laisser sous tension sans la redémarrer pour préserver les informations utiles à l'analyse ; prévenir la hiérarchie et le référent en sécurité des systèmes d'information, qui peut faire appel à un prestataire de réponse aux incidents (PRIS). Ensuite supprimer les codes malveillants et accès de l'attaquant, changer les mots de passe compromis, consigner l'incident dans un registre centralisé ; une plainte peut être déposée.",
+      "tags": ["precise", "fr", "mesure-40"]
+    },
+    {
+      "external_id": "tp-nomad-vpn",
+      "input": "Comment sécuriser la connexion au système d'information d'un ordinateur portable en déplacement ?",
+      "expected_output": "Mesure 32 : établir un tunnel VPN IPsec entre le poste nomade et une passerelle VPN IPsec de l'entité, plutôt qu'un VPN SSL/TLS. Le tunnel doit s'établir automatiquement et ne pas être débrayable par l'utilisateur, aucun flux ne sortant hors du tunnel ; pour les portails captifs, l'entité peut autoriser une connexion à la demande ou recommander le partage de connexion d'un téléphone de confiance. Au niveau renforcé, l'authentification est forte (certificat sur carte à puce ou jeton USB, ou mot de passe à usage unique).",
+      "tags": ["precise", "fr", "mesure-32"]
+    },
+    {
+      "external_id": "tp-wifi",
+      "input": "Quelles règles le guide fixe-t-il pour les réseaux Wi-Fi ?",
+      "expected_output": "Mesure 20 : limiter par la segmentation les conséquences d'une intrusion par voie radio et filtrer les flux des postes Wi-Fi aux seuls flux nécessaires ; utiliser un chiffrement robuste (WPA2, AES CCMP) et une authentification centralisée, si possible par certificats machines. Un mot de passe unique et partagé est déconseillé ; à défaut il doit être complexe, renouvelé et jamais diffusé à des tiers. Les points d'accès sont administrés de façon sécurisée, et les terminaux personnels ou visiteurs sont séparés de ceux de l'entité (SSID et VLAN distincts, accès Internet dédié).",
+      "tags": ["precise", "fr", "mesure-20"]
+    },
+    {
+      "external_id": "tp-email-dns",
+      "input": "Quels enregistrements DNS liés à la messagerie le guide demande-t-il de configurer ?",
+      "expected_output": "Mesure 24, au niveau renforcé : l'administrateur de messagerie met en place les mécanismes de vérification d'authenticité et configure correctement les enregistrements DNS publics MX, SPF, DKIM et DMARC.",
+      "tags": ["precise", "level", "fr", "mesure-24"]
+    },
+    {
+      "external_id": "tp-en-admin-network",
+      "input": "According to the ANSSI hygiene guide, how should the administration network be isolated from the office network?",
+      "expected_output": "Measure 28: the administration network must be specifically partitioned from the users' office network to prevent compromise by bouncing from a user workstation. Preferably use physical separation where possible, despite its cost and deployment time; otherwise logical cryptographic separation with IPsec tunnels, which protects integrity and confidentiality; at a minimum, logical separation with VLANs.",
+      "tags": ["english", "mesure-28"]
+    },
+    {
+      "external_id": "tp-en-local-admin-rights",
+      "input": "Should regular users have administrator rights on their own workstation?",
+      "expected_output": "No (measure 29): by default no user, whatever their position, has administration privileges on their workstation, to limit the impact of accidentally running malicious code; a store of applications validated by the organisation covers most needs. Only the administrators in charge of workstations hold these rights during their interventions. If a delegation is truly needed for a one-off need, it must be traced, limited in time and withdrawn when it expires.",
+      "tags": ["english", "mesure-29"]
+    },
+    {
+      "external_id": "tp-out-gdpr-breach",
+      "input": "Quel est le délai de notification à la CNIL d'une violation de données personnelles, d'après le guide ?",
+      "expected_output": "Le guide ne traite pas de la notification des violations de données personnelles à la CNIL ; il cite la CNIL seulement comme ressource en ligne. La bonne réponse indique que le corpus ne permet pas de répondre et n'attribue au guide aucun délai de notification.",
+      "tags": ["out-of-corpus", "fr"]
+    },
+    {
+      "external_id": "tp-out-genai",
+      "input": "Que recommande le guide pour encadrer l'usage des assistants d'IA générative par les employés ?",
+      "expected_output": "Le guide (2017) ne traite pas de l'IA générative. Une bonne réponse le dit, et peut au plus signaler, en les présentant comme des inférences, des mesures voisines : la mesure 33 déconseille l'assistant vocal intégré des terminaux mobiles parce qu'il augmente la surface d'attaque, et la mesure 3 déconseille les outils non maîtrisés hébergés dans le nuage pour les informations sensibles.",
+      "tags": ["out-of-corpus", "inference", "fr", "mesure-3", "mesure-33"]
+    }
+  ]
+}
